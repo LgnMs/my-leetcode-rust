@@ -14,3 +14,16 @@ pub fn xor_operation(n: i32, start: i32) -> i32 {
 
     sum
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::xor_operation::xor_operation;
+
+    #[test]
+    fn it_works_1() {
+        assert_eq!(xor_operation(5, 0), 8);
+        assert_eq!(xor_operation(4, 3), 8);
+        assert_eq!(xor_operation(1, 7), 7);
+        assert_eq!(xor_operation(10, 5), 2);
+    }
+}
