@@ -5,5 +5,6 @@ mod length_of_longest_substring;
 mod longest_palindrome;
 mod is_palindrome;
 mod roman_to_int;
+mod xor_operation;
 
 fn main() {}
