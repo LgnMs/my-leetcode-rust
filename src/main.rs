@@ -6,5 +6,6 @@ mod longest_palindrome;
 mod is_palindrome;
 mod roman_to_int;
 mod xor_operation;
+mod longest_common_prefix;
 
 fn main() {}
