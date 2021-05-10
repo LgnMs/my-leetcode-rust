@@ -7,5 +7,6 @@ mod is_palindrome;
 mod roman_to_int;
 mod xor_operation;
 mod longest_common_prefix;
+mod max_area;
 
 fn main() {}
