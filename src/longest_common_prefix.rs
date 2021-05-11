@@ -1,7 +1,7 @@
 /*
  * @lc app=leetcode.cn id=1 lang=rust
  *
- * [14] 罗马数字转整数
+ * [14] 最长公共前缀
  * https://leetcode-cn.com/problems/longest-common-prefix/
  */
 
