@@ -8,5 +8,6 @@ mod roman_to_int;
 mod xor_operation;
 mod longest_common_prefix;
 mod max_area;
+mod three_sum;
 
 fn main() {}
