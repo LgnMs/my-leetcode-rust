@@ -5,19 +5,20 @@
  * https://leetcode-cn.com/problems/two-sum/
  */
 
+use std::collections::{HashMap};
+
 pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-    let mut result = vec![];
-    let len = nums.len();
+    let mut map = HashMap::new();
+    for i in 0..nums.len() {
+        let diff = target - nums[i];
 
-    for i in 0..len {
-        for k in i + 1..len {
-            if nums[i] + nums[k] == target {
-                result = vec![i as i32, k as i32];
-            }
+        if map.contains_key(&nums[i]) {
+            let k = map.get(&nums[i]).unwrap();
+            return vec![*k as i32, i as i32];
         }
+        map.insert(diff, i);
     }
-
-    result
+    vec![]
 }
 
 #[cfg(test)]
