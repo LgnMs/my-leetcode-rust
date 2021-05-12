@@ -9,5 +9,6 @@ mod xor_operation;
 mod longest_common_prefix;
 mod max_area;
 mod three_sum;
+mod three_sum_closest;
 
 fn main() {}
