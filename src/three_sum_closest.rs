@@ -2,7 +2,7 @@
  * @lc app=leetcode.cn id=1 lang=rust
  *
  * [16] 最接近的三数之和
- * https://leetcode-cn.com/problems/container-with-most-water/
+ * https://leetcode-cn.com/problems/3sum-closest/
  * - [双指针，排序]
  */
 
