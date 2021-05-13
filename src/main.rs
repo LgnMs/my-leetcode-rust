@@ -10,5 +10,6 @@ mod longest_common_prefix;
 mod max_area;
 mod three_sum;
 mod three_sum_closest;
+mod max_sub_array;
 
 fn main() {}
