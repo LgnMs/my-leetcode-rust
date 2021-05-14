@@ -16,5 +16,7 @@ mod max_profit;
 mod max_profit2;
 mod rotate;
 mod contains_duplicate;
+mod single_number;
+mod intersect;
 
 fn main() {}
