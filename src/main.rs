@@ -13,5 +13,6 @@ mod three_sum_closest;
 mod max_sub_array;
 mod climb_stairs;
 mod max_profit;
+mod max_profit2;
 
 fn main() {}
