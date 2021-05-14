@@ -15,5 +15,6 @@ mod climb_stairs;
 mod max_profit;
 mod max_profit2;
 mod rotate;
+mod contains_duplicate;
 
 fn main() {}
