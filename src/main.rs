@@ -20,5 +20,6 @@ mod single_number;
 mod intersect;
 mod plus_one;
 mod move_zeroes;
+mod reverse_string;
 
 fn main() {}
