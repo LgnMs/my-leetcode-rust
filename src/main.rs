@@ -19,5 +19,6 @@ mod contains_duplicate;
 mod single_number;
 mod intersect;
 mod plus_one;
+mod move_zeroes;
 
 fn main() {}
