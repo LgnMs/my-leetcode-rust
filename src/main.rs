@@ -18,5 +18,6 @@ mod rotate;
 mod contains_duplicate;
 mod single_number;
 mod intersect;
+mod plus_one;
 
 fn main() {}
