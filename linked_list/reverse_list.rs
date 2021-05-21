@@ -12,9 +12,10 @@ pub fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
     let mut curr = head;
 
     while let Some(mut node) = curr.take() {
-        curr = node.next;
+        let next = node.next.take();
         node.next = prev;
         prev = Some(node);
+        curr = next;
     }
 
     prev
