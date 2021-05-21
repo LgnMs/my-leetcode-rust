@@ -8,31 +8,16 @@
 use crate::linked_list_utils::ListNode;
 
 pub fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-    let mut result = ListNode::new(0);
-    let mut nums:Vec<i32> = vec![];
+    let mut prev: Option<Box<ListNode>> = None;
+    let mut curr = head;
 
-    fn traverse(node: Option<Box<ListNode>>, nums: &mut Vec<i32>) {
-        match node {
-            None => (),
-            Some(node) => {
-                nums.push(node.val);
-                if node.next != None {
-                    traverse(node.next, nums);
-                }
-            },
-
-        }
-    }
-    traverse(head, &mut nums);
-    nums.reverse();
-
-    let mut t = &mut result;
-    for val in nums {
-        t.next = Some(Box::new(ListNode::new(val)));
-        t = t.next.as_mut().unwrap();
+    while let Some(mut node) = curr.take() {
+        curr = node.next;
+        node.next = prev;
+        prev = Some(node);
     }
 
-    result.next
+    prev
 }
 
 #[cfg(test)]
