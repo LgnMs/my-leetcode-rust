@@ -1,3 +1,10 @@
+/*
+ * @lc app=leetcode.cn id=1 lang=rust
+ *
+ * [387] 字符串中的第一个唯一字符
+ * https://leetcode-cn.com/problems/first-unique-character-in-a-string/
+ */
+
 use std::collections::HashMap;
 
 pub fn first_uniq_char(s: String) -> i32 {
