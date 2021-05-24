@@ -11,5 +11,6 @@ members = [
     "binary_search",
     "two_pointers",
     "greedy",
-    "string"
+    "string",
+    "tree"
 ]
