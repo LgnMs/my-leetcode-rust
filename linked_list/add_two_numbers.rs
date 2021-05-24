@@ -5,23 +5,8 @@
  * https://leetcode-cn.com/problems/add-two-numbers/
  */
 
+use crate::linked_list_utils::ListNode;
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode {
-            next: None,
-            val
-        }
-    }
-}
 pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
     let mut head = ListNode::new(0);
     let mut tail= &mut head;
@@ -66,21 +51,10 @@ pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> 
     head.next
 }
 
-/// 根据数组生成链表
-fn generate_list_node(vecs: Vec<i32>) -> Option<Box<ListNode>> {
-    let mut head = Box::new(ListNode::new(0));
-    let mut tail = &mut head;
-
-    for x in vecs.iter() {
-        tail.next = Some(Box::new(ListNode::new(*x)));
-        tail = tail.next.as_mut().unwrap();
-    }
-    head.next
-}
-
 #[cfg(test)]
 mod tests {
-    use crate::add_two_numbers::{generate_list_node, add_two_numbers};
+    use crate::add_two_numbers::add_two_numbers;
+    use crate::linked_list_utils::generate_list_node;
 
     #[test]
     fn it_works_1() {
