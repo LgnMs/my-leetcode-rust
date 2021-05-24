@@ -90,4 +90,3 @@ mod tests {
         assert_eq!(cl, generate_list_node(vec![8,9,9,9,0,0,0,1]));
     }
 }
-
