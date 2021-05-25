@@ -31,6 +31,9 @@ version = "0.1.0"
 [[package]]
 name = "playground"
 version = "0.1.0"
+dependencies = [
+ "tree",
+]
 
 [[package]]
 name = "sort"

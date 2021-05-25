@@ -8,3 +8,6 @@ readme = "README.md"
 [[bin]]
 name = "playground"
 path = "main.rs"
+
+[dependencies]
+tree = { path = "../tree" }
