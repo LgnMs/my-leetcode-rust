@@ -1,3 +1,3 @@
-// mod max_depth;
-mod max_depth;
 pub mod tree_utils;
+mod max_depth;
+mod is_valid_bst;
