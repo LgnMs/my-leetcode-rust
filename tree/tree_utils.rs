@@ -1,4 +1,3 @@
-use std::borrow::Borrow;
 use std::cell::RefCell;
 use std::rc::Rc;
 
@@ -27,5 +26,11 @@ impl TreeNode {
         } else if self.right.is_none() {
             self.right = node;
         }
+    }
+    pub fn get_left(&self) -> &Rc<RefCell<TreeNode>> {
+        self.left.as_ref().unwrap()
+    }
+    pub fn get_right(&self) -> &Rc<RefCell<TreeNode>> {
+        self.right.as_ref().unwrap()
     }
 }
