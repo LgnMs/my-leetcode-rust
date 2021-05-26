@@ -2,19 +2,15 @@
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
     pub val: i32,
-    pub next: Option<Box<ListNode>>
+    pub next: Option<Box<ListNode>>,
 }
 
 impl ListNode {
     #[inline]
     pub fn new(val: i32) -> Self {
-        ListNode {
-            next: None,
-            val
-        }
+        ListNode { next: None, val }
     }
 }
-
 
 /// 根据数组生成链表
 pub fn generate_list_node(vecs: Vec<i32>) -> Option<Box<ListNode>> {

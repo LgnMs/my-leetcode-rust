@@ -21,7 +21,7 @@ pub fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
         let k = len - 1 - i;
 
         if nums[i] != nums[k] {
-            return false    ;
+            return false;
         }
     }
 
@@ -30,8 +30,8 @@ pub fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
 
 #[cfg(test)]
 mod tests {
-    use crate::linked_list_utils::generate_list_node;
     use crate::is_palindrome::is_palindrome;
+    use crate::linked_list_utils::generate_list_node;
 
     #[test]
     fn it_work_1() {

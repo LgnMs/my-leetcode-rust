@@ -41,7 +41,7 @@ mod tests {
 
     #[test]
     fn it_work_1() {
-        assert_eq!(three_sum_closest(vec![-1,2,1,-4], 1), 2);
+        assert_eq!(three_sum_closest(vec![-1, 2, 1, -4], 1), 2);
     }
     #[test]
     fn it_work_2() {
@@ -49,10 +49,10 @@ mod tests {
     }
     #[test]
     fn it_work_3() {
-        assert_eq!(three_sum_closest(vec![1,1,1,0], -100), 2);
+        assert_eq!(three_sum_closest(vec![1, 1, 1, 0], -100), 2);
     }
     #[test]
     fn it_work_4() {
-        assert_eq!(three_sum_closest(vec![1,1,-1,-1,3], -1), -1);
+        assert_eq!(three_sum_closest(vec![1, 1, -1, -1, 3], -1), -1);
     }
 }

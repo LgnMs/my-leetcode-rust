@@ -7,7 +7,7 @@
 
 pub fn is_palindrome(x: i32) -> bool {
     if x > 0 && x < 10 {
-        return true
+        return true;
     }
     if x.to_string().chars().rev().collect::<String>() == x.to_string() {
         true
@@ -19,7 +19,7 @@ pub fn is_palindrome(x: i32) -> bool {
 #[cfg(test)]
 
 mod tests {
-    use crate::is_palindrome::is_palindrome;
+    use super::is_palindrome;
 
     #[test]
     fn it_work_1() {

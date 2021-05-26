@@ -7,9 +7,12 @@
 
 use crate::linked_list_utils::ListNode;
 
-pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+pub fn add_two_numbers(
+    l1: Option<Box<ListNode>>,
+    l2: Option<Box<ListNode>>,
+) -> Option<Box<ListNode>> {
     let mut head = ListNode::new(0);
-    let mut tail= &mut head;
+    let mut tail = &mut head;
     let mut carry = 0;
     let mut p = l1;
     let mut q = l2;
@@ -58,14 +61,14 @@ mod tests {
 
     #[test]
     fn it_works_1() {
-        let a = vec![2,4,3];
-        let b = vec![5,6,4];
+        let a = vec![2, 4, 3];
+        let b = vec![5, 6, 4];
 
         let al = generate_list_node(a);
         let bl = generate_list_node(b);
         let cl = add_two_numbers(al, bl);
 
-        assert_eq!(cl, generate_list_node(vec![7,0,8]));
+        assert_eq!(cl, generate_list_node(vec![7, 0, 8]));
     }
     #[test]
     fn it_works_2() {
@@ -80,13 +83,13 @@ mod tests {
     }
     #[test]
     fn it_works_3() {
-        let a = vec![9,9,9,9,9,9,9];
-        let b = vec![9,9,9,9];
+        let a = vec![9, 9, 9, 9, 9, 9, 9];
+        let b = vec![9, 9, 9, 9];
 
         let al = generate_list_node(a);
         let bl = generate_list_node(b);
         let cl = add_two_numbers(al, bl);
 
-        assert_eq!(cl, generate_list_node(vec![8,9,9,9,0,0,0,1]));
+        assert_eq!(cl, generate_list_node(vec![8, 9, 9, 9, 0, 0, 0, 1]));
     }
 }

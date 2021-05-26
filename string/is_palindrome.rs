@@ -12,10 +12,10 @@ pub fn is_palindrome(s: String) -> bool {
     let chars = s.to_lowercase().into_bytes();
 
     fn is_letter_or_number(c: u8) -> bool {
-        (c >= 97 && c <= 122) ||(c >= 48 && c <= 57)
+        (c >= 97 && c <= 122) || (c >= 48 && c <= 57)
     }
 
-    while  i < k {
+    while i < k {
         if !is_letter_or_number(chars[i]) {
             i += 1;
             continue;
@@ -26,7 +26,7 @@ pub fn is_palindrome(s: String) -> bool {
         }
 
         if chars[i] != chars[k] {
-            return  false;
+            return false;
         }
         i += 1;
         k -= 1;
@@ -40,7 +40,10 @@ mod test {
 
     #[test]
     fn it_work_1() {
-        assert_eq!(is_palindrome("A man, a plan, a canal: Panama".to_string()), true);
+        assert_eq!(
+            is_palindrome("A man, a plan, a canal: Panama".to_string()),
+            true
+        );
     }
     #[test]
     fn it_work_2() {

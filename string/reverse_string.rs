@@ -20,7 +20,7 @@ mod tests {
 
     #[test]
     fn it_work_1() {
-        let mut v = vec!['h','e','l','l','o'];
+        let mut v = vec!['h', 'e', 'l', 'l', 'o'];
         let mut k = v.clone();
         reverse_string(&mut v);
         k.reverse();

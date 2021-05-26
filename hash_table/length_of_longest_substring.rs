@@ -18,7 +18,9 @@ pub fn length_of_longest_substring(s: String) -> i32 {
             // q.pop_front()返回option类型的数据，当返回为None的时候循环停止
             while let Some(x) = q.pop_front() {
                 set.remove(&x);
-                if x == s[i] { break; }
+                if x == s[i] {
+                    break;
+                }
             }
         }
         set.insert(s[i]);

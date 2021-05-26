@@ -18,7 +18,7 @@ pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
     }
 
     // [-4, -1, -1, 0, 1, 2]
-    while  i < len - 1 {
+    while i < len - 1 {
         let mut j = i + 1;
         let mut k = len - 1;
         while j < k {
@@ -51,21 +51,40 @@ mod tests {
 
     #[test]
     fn it_work_1() {
-        assert_eq!(three_sum(vec![-1,0,1,2,-1,-4]), vec![[-1,-1,2],[-1,0,1]]);
+        assert_eq!(
+            three_sum(vec![-1, 0, 1, 2, -1, -4]),
+            vec![[-1, -1, 2], [-1, 0, 1]]
+        );
     }
     #[test]
     fn it_work_2() {
         assert_eq!(three_sum(vec![0, 0, 0]), vec![[0, 0, 0]]);
         assert_eq!(three_sum(vec![0, 0, 0, 0]), vec![[0, 0, 0]]);
-        assert_eq!(three_sum(vec![-1,0,1,0]), vec![[-1,0,1]]);
+        assert_eq!(three_sum(vec![-1, 0, 1, 0]), vec![[-1, 0, 1]]);
     }
 
     #[test]
     fn it_work_3() {
-        assert_eq!(three_sum(vec![-2,0,1,1,2]), vec![[-2,0,2],[-2,1,1]]);
+        assert_eq!(
+            three_sum(vec![-2, 0, 1, 1, 2]),
+            vec![[-2, 0, 2], [-2, 1, 1]]
+        );
     }
     #[test]
     fn it_work_4() {
-        assert_eq!(three_sum(vec![-1,0,1,2,-1,-4,-2,-3,3,0,4]), vec![[-4,0,4],[-4,1,3],[-3,-1,4],[-3,0,3],[-3,1,2],[-2,-1,3],[-2,0,2],[-1,-1,2],[-1,0,1]]);
+        assert_eq!(
+            three_sum(vec![-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4]),
+            vec![
+                [-4, 0, 4],
+                [-4, 1, 3],
+                [-3, -1, 4],
+                [-3, 0, 3],
+                [-3, 1, 2],
+                [-2, -1, 3],
+                [-2, 0, 2],
+                [-1, -1, 2],
+                [-1, 0, 1]
+            ]
+        );
     }
 }

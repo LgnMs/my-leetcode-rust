@@ -25,8 +25,8 @@ mod tests {
 
     #[test]
     fn it_work_1() {
-        let mut v = vec![0,1,0,3,12];
+        let mut v = vec![0, 1, 0, 3, 12];
         move_zeroes(&mut v);
-        assert_eq!(v, vec![1,3,12,0,0]);
+        assert_eq!(v, vec![1, 3, 12, 0, 0]);
     }
 }

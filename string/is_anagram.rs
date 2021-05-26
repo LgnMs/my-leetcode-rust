@@ -5,7 +5,6 @@
  * https://leetcode-cn.com/problems/valid-anagram/
  */
 pub fn is_anagram(s: String, t: String) -> bool {
-
     let mut s_b = s.into_bytes();
     let mut t_b = t.into_bytes();
     if s_b.len() != t_b.len() {
@@ -23,6 +22,9 @@ mod test {
 
     #[test]
     fn it_work_1() {
-        assert_eq!(is_anagram("anagram".to_string(), "nagaram".to_string()), true);
+        assert_eq!(
+            is_anagram("anagram".to_string(), "nagaram".to_string()),
+            true
+        );
     }
 }

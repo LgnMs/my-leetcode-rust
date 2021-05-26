@@ -12,7 +12,7 @@ pub fn max_profit(prices: Vec<i32>) -> i32 {
     for x in prices {
         if x < min {
             min = x;
-        } else  if x - min > max_sum {
+        } else if x - min > max_sum {
             max_sum = x - min;
         }
     }
@@ -26,6 +26,6 @@ mod tests {
 
     #[test]
     fn it_work_1() {
-        assert_eq!(max_profit(vec![2,4,1]), 2);
+        assert_eq!(max_profit(vec![2, 4, 1]), 2);
     }
 }

@@ -20,11 +20,11 @@ mod tests {
 
     #[test]
     fn it_work_1() {
-        let mut v = vec![1,2,3,4,5,6,7];
-        let mut v2 = vec![-1,-100,3,99];
+        let mut v = vec![1, 2, 3, 4, 5, 6, 7];
+        let mut v2 = vec![-1, -100, 3, 99];
         rotate(&mut v, 3);
         rotate(&mut v2, 2);
-        assert_eq!(v, vec![5,6,7,1,2,3,4]);
-        assert_eq!(v2, vec![3,99,-1,-100]);
+        assert_eq!(v, vec![5, 6, 7, 1, 2, 3, 4]);
+        assert_eq!(v2, vec![3, 99, -1, -100]);
     }
 }

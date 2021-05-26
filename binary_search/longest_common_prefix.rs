@@ -10,7 +10,7 @@ pub fn longest_common_prefix(strs: Vec<String>) -> String {
         return String::from("");
     }
     if strs.len() == 1 {
-        return  strs[0].to_string();
+        return strs[0].to_string();
     }
     let mut s = "";
     let mut min_len = 0;
@@ -46,12 +46,34 @@ mod tests {
 
     #[test]
     fn it_work_1() {
-        assert_eq!(longest_common_prefix(vec!["flower", "flow", "flight"].iter().map(|x| x.to_string()).collect()), "fl");
-        assert_eq!(longest_common_prefix(vec!["dog", "racecar", "car"].iter().map(|x| x.to_string()).collect()), "");
+        assert_eq!(
+            longest_common_prefix(
+                vec!["flower", "flow", "flight"]
+                    .iter()
+                    .map(|x| x.to_string())
+                    .collect()
+            ),
+            "fl"
+        );
+        assert_eq!(
+            longest_common_prefix(
+                vec!["dog", "racecar", "car"]
+                    .iter()
+                    .map(|x| x.to_string())
+                    .collect()
+            ),
+            ""
+        );
     }
     #[test]
     fn it_work_2() {
-        assert_eq!(longest_common_prefix(vec!["ab", "a"].iter().map(|x| x.to_string()).collect()), "a");
-        assert_eq!(longest_common_prefix(vec!["", "b"].iter().map(|x| x.to_string()).collect()), "");
+        assert_eq!(
+            longest_common_prefix(vec!["ab", "a"].iter().map(|x| x.to_string()).collect()),
+            "a"
+        );
+        assert_eq!(
+            longest_common_prefix(vec!["", "b"].iter().map(|x| x.to_string()).collect()),
+            ""
+        );
     }
 }

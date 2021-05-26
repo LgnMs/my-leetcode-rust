@@ -40,7 +40,7 @@ mod tests {
     #[test]
     fn it_work_1() {
         // TODO 测试方法需要重写
-        assert_eq!(intersect(vec![1,2,2,1], vec![2,2]), vec![2, 2]);
-        assert_eq!(intersect(vec![4,9,5], vec![9,4,9,8,4]), vec![9, 4]);
+        assert_eq!(intersect(vec![1, 2, 2, 1], vec![2, 2]), vec![2, 2]);
+        assert_eq!(intersect(vec![4, 9, 5], vec![9, 4, 9, 8, 4]), vec![9, 4]);
     }
 }

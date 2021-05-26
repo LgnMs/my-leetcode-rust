@@ -5,7 +5,7 @@
  * https://leetcode-cn.com/problems/two-sum/
  */
 
-use std::collections::{HashMap};
+use std::collections::HashMap;
 
 pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut map = HashMap::new();
@@ -23,7 +23,7 @@ pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
 
 #[cfg(test)]
 mod tests {
-    use crate::two_sum::{two_sum};
+    use crate::two_sum::two_sum;
 
     #[test]
     fn it_works_1() {
@@ -34,14 +34,14 @@ mod tests {
     }
     #[test]
     fn it_works_2() {
-        let nums = vec![3,2,4];
+        let nums = vec![3, 2, 4];
         let target = 6;
 
         assert_eq!(vec![1, 2], two_sum(nums, target));
     }
     #[test]
     fn it_works_3() {
-        let nums = vec![3,3];
+        let nums = vec![3, 3];
         let target = 6;
 
         assert_eq!(vec![0, 1], two_sum(nums, target));

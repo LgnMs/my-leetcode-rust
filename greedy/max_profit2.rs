@@ -22,6 +22,6 @@ mod tests {
 
     #[test]
     fn it_work_1() {
-        assert_eq!(max_profit2(vec![7,1,5,3,6,4]), 7);
+        assert_eq!(max_profit2(vec![7, 1, 5, 3, 6, 4]), 7);
     }
 }

@@ -6,7 +6,6 @@
  * - [rust:模式匹配]
  */
 
-
 pub fn roman_to_int(s: String) -> i32 {
     let mut sum = 0;
     let b = s.as_bytes();
@@ -20,7 +19,7 @@ pub fn roman_to_int(s: String) -> i32 {
             b'V' => 5,
             b'X' => match b.get(i + 1) {
                 Some(b'L') | Some(b'C') => -10,
-                _ => 10
+                _ => 10,
             },
             b'L' => 50,
             b'C' => match b.get(i + 1) {
@@ -43,7 +42,6 @@ mod tests {
 
     #[test]
     fn it_works_1() {
-
         assert_eq!(roman_to_int(String::from("III")), 3);
         assert_eq!(roman_to_int(String::from("IV")), 4);
         assert_eq!(roman_to_int(String::from("IX")), 9);

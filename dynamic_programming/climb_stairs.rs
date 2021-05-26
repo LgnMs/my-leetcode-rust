@@ -13,7 +13,6 @@ pub fn climb_stairs(n: i32) -> i32 {
     let mut nums = vec![1, 2];
     let len = n as usize;
 
-
     for x in 2..len {
         nums.push(nums[x - 2] + nums[x - 1]);
     }

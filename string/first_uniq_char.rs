@@ -17,7 +17,7 @@ pub fn first_uniq_char(s: String) -> i32 {
         match map.get_mut(&val) {
             Some(x) => {
                 *x += 1;
-            },
+            }
             None => {
                 map.insert(val, 1);
             }
