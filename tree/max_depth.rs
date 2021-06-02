@@ -31,10 +31,10 @@ pub fn max_depth(root: Option<Rt>) -> i32 {
 
 #[cfg(test)]
 mod test {
-    use crate::tree_utils::TreeNode;
     use crate::max_depth::max_depth;
-    use std::rc::Rc;
+    use crate::tree_utils::TreeNode;
     use std::cell::RefCell;
+    use std::rc::Rc;
 
     #[test]
     fn it_work_1() {

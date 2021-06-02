@@ -7,10 +7,8 @@ fn main() {
     tree.left = Some(Rc::new(RefCell::new(TreeNode::new(1))));
     tree.right = Some(Rc::new(RefCell::new(TreeNode::new(2))));
     //
-    tree.left.as_ref().unwrap().borrow_mut().left =
-        Some(Rc::new(RefCell::new(TreeNode::new(3))));
-    tree.left.as_ref().unwrap().borrow_mut().right =
-        Some(Rc::new(RefCell::new(TreeNode::new(4))));
+    tree.left.as_ref().unwrap().borrow_mut().left = Some(Rc::new(RefCell::new(TreeNode::new(3))));
+    tree.left.as_ref().unwrap().borrow_mut().right = Some(Rc::new(RefCell::new(TreeNode::new(4))));
 
     println!("{:?}", tree);
 }

@@ -5,9 +5,9 @@
  * https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
  * ps: 在rust中使用迭代法太折磨了，我就不写了
  */
-use std::rc::Rc;
-use std::cell::RefCell;
 use crate::tree_utils::TreeNode;
+use std::cell::RefCell;
+use std::rc::Rc;
 
 pub fn preorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
     let mut nums = vec![];
@@ -16,7 +16,7 @@ pub fn preorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         let node = match node {
             None => {
                 return;
-            },
+            }
             Some(x) => x,
         };
         nums.push(node.borrow().val);
@@ -32,13 +32,12 @@ pub fn preorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
     nums
 }
 
-
 #[cfg(test)]
 mod test {
-    use crate::tree_utils::TreeNode;
     use crate::preorder_traversal::preorder_traversal;
-    use std::rc::Rc;
+    use crate::tree_utils::TreeNode;
     use std::cell::RefCell;
+    use std::rc::Rc;
 
     #[test]
     fn it_work_1() {
