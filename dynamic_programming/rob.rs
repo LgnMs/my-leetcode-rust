@@ -14,14 +14,17 @@ pub fn rob(nums: Vec<i32>) -> i32 {
     if nums.len() == 2 {
         return max(nums[0], nums[1]);
     }
-    let mut dp = vec![nums[0], max(nums[0], nums[1])];
+    let mut first = nums[0];
+    let mut second = max(nums[0], nums[1]);
+    let mut sum = 0;
     let len = nums.len();
 
     for i in 2..len  {
-        dp.push(max(nums[i] + dp[i - 2], dp[i - 1]));
+        sum = max(nums[i] + first, second);
+        first = second;
+        second = sum;
     }
-
-    dp[dp.len() - 1]
+    sum
 }
 
 #[cfg(test)]
