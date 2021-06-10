@@ -1,6 +1,3 @@
-struct NumArray {
-    nums: Vec<i32>,
-}
 
 /*
  * @lc app=leetcode.cn id=1 lang=rust
@@ -8,6 +5,9 @@ struct NumArray {
  * 303. 区域和检索 - 数组不可变
  * https://leetcode-cn.com/problems/range-sum-query-immutable/
  */
+pub struct NumArray {
+    nums: Vec<i32>,
+}
 
 /**
  * `&self` means the method takes an immutable reference.
@@ -39,8 +39,14 @@ impl NumArray {
  */
 #[cfg(test)]
 mod test {
+    use super::NumArray;
+
     #[test]
     fn it_work_1() {
-
+        let obj = NumArray::new(vec![-2, 0, 3, -5, 2, -1]);
+        
+        assert_eq!(obj.sum_range(0, 2), 1);
+        assert_eq!(obj.sum_range(2, 5), -1);
+        assert_eq!(obj.sum_range(0, 5), -3);
     }
 }
