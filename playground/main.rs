@@ -1,6 +1,7 @@
-fn main() {
-    let a = ["1", "2", "lol"];
 
-    let mut iter = a.iter().filter_map(|s| s.parse().ok()).collect::<Vec<u32>>();
-    print!("{:?}", iter);
+fn main() {
+    
+    for i in 0..2 {
+        print!("{}", i);
+    }
 }
