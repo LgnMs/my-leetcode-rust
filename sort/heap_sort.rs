@@ -1,5 +1,6 @@
 /**
 *  堆排序实现
+*  时间 Ο(nlgn)
 */
 use std::usize;
 
